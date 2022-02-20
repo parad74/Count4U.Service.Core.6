@@ -1,0 +1,21 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+
+	<PropertyGroup>
+ 		<TargetFramework>net6.0</TargetFramework>
+ 		<OutputType>Library</OutputType>
+ 		<AnalysisLevel>6.0</AnalysisLevel>
+		<BlazorWebAssemblyEnableLinking>false</BlazorWebAssemblyEnableLinking>
+ 	</PropertyGroup>
+
+
+	
+	<ItemGroup>
+		<PackageReference Include="Microsoft.Windows.Compatibility" Version="6.0.0" />
+
+	</ItemGroup>
+	
+
+</Project>
+
+

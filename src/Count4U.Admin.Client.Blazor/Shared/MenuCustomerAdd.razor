@@ -1,0 +1,36 @@
+﻿<profile-menu>
+    <div class="row px-0">
+        <button class="btn btn-lg profile-menu-inbutton" @onclick="NavigateToCustomersGrid">Customers</button>
+        <div class="profile-menu-line-border row"></div>
+    </div>
+        <div  class="row px-0">
+            <button class="btn btn-lg profile-menu-inbutton" @onclick="NavigateToUsersGrid">Users</button>
+            <div class="profile-menu-line-border row"></div>
+        </div>
+        <div  class="row px-0">
+            <button class="btn btn-lg profile-menu-inbutton" @onclick="NavigateToRolesGrid">Roles</button>
+        </div>
+
+</profile-menu>
+
+@code{
+
+    [Inject]
+    protected NavigationManager _navigationManager { get; set; }
+
+    public async Task NavigateToCustomersGrid()
+    {
+        this._navigationManager.NavigateTo(@"/customergrid");
+    }
+
+    public async Task NavigateToUsersGrid()
+    {
+
+        this._navigationManager.NavigateTo(@"/usergrid");
+    }
+
+    public async Task NavigateToRolesGrid()
+    {
+        this._navigationManager.NavigateTo(@"/rolegrid");
+    }
+}

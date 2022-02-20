@@ -1,0 +1,294 @@
+﻿@page  "/objectprofilexmlfileedit/{objectCode}"
+@page "/objectprofilexmlfileedit/{objectCode}/{email}"
+@namespace Count4U.Admin.Client.Page
+@using Monitor.Service.Shared
+@inherits ObjectProfileXmlFileEditBase
+@attribute [Authorize(Policy = UserPolicy.IsProfile)]
+<style type="text/css">
+    .fieldflexitem {
+        /*   display: flex;
+            flex-direction: column;
+            justify-content: flex-start;*/
+        min-width: 50px;
+        background-color: azure
+    }
+
+    .fielditem50 {
+        /*   display: flex;
+            flex-direction: column;
+            justify-content: flex-start;*/
+        min-width: 50px;
+        min-height: 30px;
+        background-color: lightgrey;
+        vertical-align: middle
+    }
+
+    .flexlistcontainer {
+        display: flex;
+        flex-flow: row wrap;
+    }
+</style>
+
+<h6 class="bg-success p-1 text-white">Edit Profile</h6>
+@*https://getbootstrap.com/docs/4.0/components/breadcrumb/*@
+<div>
+
+
+    @if (_profileXmlFile == null)
+    {
+        <WaitCursor2 />
+        @*<p><em>Loading1 ...</em></p>*@
+    }
+    else if (LocalizationResources == null)
+    {
+        <WaitCursor2 />
+        @*<p><em>Loading3...</em></p>*@
+    }
+    else if (_profileDomainObject == null)
+    {
+        <div class="row pr-3">
+            <div class="col-10 profile-menu-border">
+                <div class="card" style="border:none">
+                    <div class="card-body" style="border:none">
+                        <DefaultCBIComponent _profileFile="@_profileXmlFile"></DefaultCBIComponent>
+                        <div class="line-border row"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-2 profile-menu-background">
+                <MenuProfileEditDissable _customerCode="@objectCode" _email="@email"></MenuProfileEditDissable>
+            </div>
+        </div>
+    }
+    else
+    {
+        <div class="row pr-3">
+
+            <div class="col-10 profile-menu-border">
+                <div class="card" style="border:none">
+                    <div class="card-body" style="border:none">
+                        <EditForm Model="@_profileDomainObject" OnValidSubmit="SaveObjectAsync">
+
+                            <DataAnnotationsValidator />
+                            <ValidationSummary />
+
+                            <DefaultCBIComponent _profileFile="@_profileXmlFile"></DefaultCBIComponent>
+                            <div class="line-border row"></div>
+
+                            @if (CurrentOperation == OperationTypeEnum.General)
+                            {
+                                <ScannerTypeComponent _isSubmit="@IsSubmit" _profileDomainObject="@_profileDomainObject">  </ScannerTypeComponent>
+                                <div class="line-border row"></div>
+                                <InventoryProcessConfigurationComponent _isSubmit="@IsSubmit" _profileDomainObject="@_profileDomainObject"></InventoryProcessConfigurationComponent>
+                                <div class="line-border row"></div>
+                                <ScreenConfigurationComponent _isSubmit="@IsSubmit" _profileDomainObject="@_profileDomainObject"></ScreenConfigurationComponent>
+                                <div class="line-border row"></div>
+                            }
+                            @if (CurrentOperation == OperationTypeEnum.DefaultUIconfiguration)
+                            {
+                                //  InventoryListDefaultUIconfigurationComponent
+                                <InventoryListDefaultUIconfigurationListComponent _isSubmit="@IsSubmit"
+                                                                                  _profileDomainObject="@_profileDomainObject"
+                                                                                  _itemType="@ItemType"
+                                                                                  _fieldList2="@FieldList2"></InventoryListDefaultUIconfigurationListComponent>
+                            }
+                            @if (CurrentOperation == OperationTypeEnum.DatabaseSettings)
+                            {
+                                <DatabaseSettingsComponent _isSubmit="@IsSubmit"
+                                                           _profileDomainObject="@_profileDomainObject"
+                                                           _fieldList2="@FieldList2"
+                                                           _fieldList3="@FieldList3"></DatabaseSettingsComponent>
+                            }
+                            @if (CurrentOperation == OperationTypeEnum.InventoryItemDetailsForm)
+                            {
+                                <InventoryItemDetailsFormComponent _isSubmit="@IsSubmit"
+                                                                   _profileDomainObject="@_profileDomainObject"
+                                                                   _fieldList2="@FieldList2"></InventoryItemDetailsFormComponent>
+                            }
+                            @if (CurrentOperation == OperationTypeEnum.SearchConfiguration)
+                            {
+                                <SearchByScanerConfigurationComponent _isSubmit="@IsSubmit"
+                                                                      _profileDomainObject="@_profileDomainObject"
+                                                                      _fieldList2="@FieldList2">
+
+                                </SearchByScanerConfigurationComponent>
+                                <div class="line-border row"></div>
+                                <SearchInCatalogConfigurationComponent _isSubmit="@IsSubmit"
+                                                                       _profileDomainObject="@_profileDomainObject"
+                                                                       _fieldList3="@FieldCatalogList3">
+                                </SearchInCatalogConfigurationComponent>
+                                <div class="line-border row"></div>
+                                <SearchInLocationConfigurationComponent _isSubmit="@IsSubmit"
+                                                                        _profileDomainObject="@_profileDomainObject"
+                                                                        _fieldList2="@FieldList2">
+                                </SearchInLocationConfigurationComponent>
+                            }
+                            @if (CurrentOperation == OperationTypeEnum.AdditionalScreensConfiguration)
+                            {
+
+                                <AdditionalScreensConfigurationComponent _isSubmit="@IsSubmit"
+                                                                         _profileDomainObject="@_profileDomainObject"
+                                                                         _fieldList="@FieldList">
+                                </AdditionalScreensConfigurationComponent>
+                            }
+                            @if (CurrentOperation == OperationTypeEnum.InventoryImages)
+                            {
+                                    <InventoryImagesComponent _isSubmit="@IsSubmit"
+                                                              _profileDomainObject="@_profileDomainObject"
+                                                              _fieldList="@FieldList3">
+                                    </InventoryImagesComponent>
+                            }
+                            @if (CurrentOperation == OperationTypeEnum.PrinterSettings)
+                            {
+                        <PrinterSettingsComponent _isSubmit="@IsSubmit"
+                                                              _profileDomainObject="@_profileDomainObject"
+                                                  _fieldList4="@FieldList4"
+                                                              ></PrinterSettingsComponent>
+                        }
+                                                  @if (CurrentOperation==OperationTypeEnum.BarcodeScannerManipulations)
+                                                  {
+                                                  }
+
+                            <div class="row pt-5">
+                                <div class="form-group pt-2">
+
+                                    <button @onclick="@(() => Reset())" class="btn btn-outline-dark btn-sm search" disabled="@IsSubmit">
+                                        <i class="oi oi-x outline-dark"></i>&nbsp; &nbsp; &nbsp;Reset&nbsp;&nbsp;&nbsp;
+                                    </button>
+                                    @if (IsSubmit)
+                                    {
+                                        <button class="btn btn-success btn-sm  search disabled mx-2" disabled><span class="fa fa-spinner fa-spin fa-lg fa-fw"></span>Waiting ...</button>
+                                    }
+                                    else
+                                    {
+                                        <button type="submit" class="btn btn-success btn-sm search mx-2" data-toggle="tooltip" data-placement="bottom"><i class="oi oi-pencil text-white"></i>&nbsp; &nbsp; &nbsp;&nbsp;Save&nbsp;&nbsp;&nbsp;&nbsp;</button>
+                                    }
+                                </div>
+                                @*</div>*@
+                                <div class="col-md-6">
+                                    @if (_profileFileService.RunUpdateFtpAndDbProfiles != null)
+                                    {
+                                        @foreach (var command in _profileFileService.RunUpdateFtpAndDbProfiles)
+                                        {
+                                            <OperationResaltComponent Successful="@command.Successful"
+                                                                      Error="@command.Error" Operation="@command.Step.GetDisplayDescription()">
+
+                                            </OperationResaltComponent>
+
+                                        }
+                                    }
+                                </div>
+
+                            </div>
+
+
+                        </EditForm>
+
+                        <div class="row">
+                            <div class="col-11  pt-4">
+                                <div class="line-border row"></div>
+                            </div>
+                            <div class="col-1  pt-4">
+                                @*<button class="" type="button" @onclick="@(() => DoCollapsed())"><span class="oi oi-chevron-bottom"></span></button>*@
+
+                                <label class="switch">
+                                    <input type="checkbox" class="checkbox" @bind="Expanded" @onclick="@(() => OnExpanded())" id="collapsed" />
+                                    <span class="slider round"></span>
+                                </label>
+
+                                @*@if (Expanded)
+                                        {
+                                    <span class="p-2">Collapse</span>
+                                        }
+                                        else
+                                        {
+                                    <span class="p-2">Expand</span>
+                                        }
+                                    </div>*@
+
+                            </div>
+
+
+                        </div>
+
+
+
+                        @if (Expanded == true)
+                        {
+                            <div class="row">
+
+                                <button class="btn btn-outline-success btn-sm search" type="button" @onclick="@(() => CheckObjectAsync())">Check</button>
+                            </div>
+
+                            <br>
+                            @*<div class="line-border row"></div>*@
+
+                            <div class="@CssEditorContent">
+                                <MonacoDiffEditorXml @ref="_xmlDiffEditor"
+                                                     Id="monacoDiffEditorXml"
+                                                     OriginalValue="@_originalProfileXml"
+                                                     ModifiedValue="@_modifiedProfileXml"
+                                                     CssClass="editor" />
+
+                            </div>
+
+                        }
+                    </div>
+                </div>
+            </div>
+            <div class="col-2 profile-menu-background">
+                @if (IsSubmit)
+                {
+                    <MenuProfileEditDissable></MenuProfileEditDissable>
+                }
+                else
+                {
+                    <MenuProfileEdit OnChangePageClick="SetCurrentOperation" 
+                                     _customerCode="@objectCode" _email="@email"></MenuProfileEdit>
+                }
+            </div>
+        </div>
+
+
+
+    }
+
+</div>
+
+
+
+      @code{
+
+          //public int page { get; set; } = 1;
+
+          public OperationTypeEnum CurrentOperation { get; set; } = OperationTypeEnum.General;
+
+          public enum OperationTypeEnum {
+              General = 1,
+              DefaultUIconfiguration = 2,
+              DatabaseSettings = 3,
+              InventoryItemDetailsForm = 4,
+              SearchConfiguration = 5,
+              AdditionalScreensConfiguration = 6,
+              InventoryImages = 7,
+              PrinterSettings = 8,
+              BarcodeScannerManipulations = 9
+          }
+
+          public async Task SetCurrentOperation(int page)
+          {
+              Console.WriteLine($"SetCurrentOperation {page}");
+              if (page == 1) CurrentOperation = OperationTypeEnum.General;
+              else if (page == 2) CurrentOperation = OperationTypeEnum.DefaultUIconfiguration;
+              else if (page == 3) CurrentOperation = OperationTypeEnum.DatabaseSettings;
+              else if (page == 4) CurrentOperation = OperationTypeEnum.InventoryItemDetailsForm;
+              else if (page == 5) CurrentOperation = OperationTypeEnum.SearchConfiguration;
+              else if (page == 6) CurrentOperation = OperationTypeEnum.AdditionalScreensConfiguration;
+              else if (page == 7) CurrentOperation = OperationTypeEnum.InventoryImages;
+              else if (page == 8) CurrentOperation = OperationTypeEnum.PrinterSettings;
+              else if (page == 9) CurrentOperation = OperationTypeEnum.BarcodeScannerManipulations;
+              else CurrentOperation = OperationTypeEnum.General;
+              StateHasChanged();
+          }
+
+                 }

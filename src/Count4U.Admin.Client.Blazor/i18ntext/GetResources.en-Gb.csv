@@ -1,0 +1,814 @@
+﻿Property_Inventor_InventorCode,Inventor Code
+Lable_SurveyPrompt,Please take our ({0}) and tell us what you think
+Line_7,UpdateVer
+Bit_Branch_CodeEmpty,Code can not be Empty
+Bit_Branch_CodeErpEmpty,Code ERP can not be Empty
+Bit_Branch_CodeErpFormat,Unacceptable symbols
+Bit_Branch_CodeFormat,Unacceptable symbols
+Bit_Branch_CodeLength,Code Length must be in range between 3 and 10
+Bit_Branch_CodeLocalEmpty,Code Local can not be empty
+Bit_Branch_CodeLocalFormat,Unacceptable symbols
+Bit_Branch_CodeUnique,Branch with such Code already exists
+Bit_Branch_ContactPersonFormat,Unacceptable symbols
+Bit_Customer_CodeEmpty,Code can not be Empty
+Bit_Customer_CodeFormat,Unacceptable symbols
+Bit_Customer_CodeLength,Code Length must be in range between 3 and 10
+Bit_Customer_CodeUnique,Customer with such code already exists
+Bit_Customer_ContactPersonFormat,Unacceptable symbols
+Bit_Customer_PicFileInvalid,File is not valid image
+Bit_Customer_PicFileMissed,File doesn't exist
+Bit_FKCodeIsEmpty_BarcodeOrMakatIsEmpty,Barcode or Makat Is Empty
+Bit_FKCodeIsEmpty_BarcodeOrMakatIsNotExistsInCatalog,Barcode or Makat Is Not Exists In Catalog 
+Bit_FKCodeIsEmpty_DocumentCode,DocumentCode Is Empty
+Bit_FKCodeIsEmpty_General,FK Code Is Empty
+Bit_FKCodeIsEmpty_IturCode,IturCode Is Empty
+Bit_FKCodeIsEmpty_LocationCode,LocationCode Is Empty
+Bit_HebrewCharsAreNotAllowed,Hebrew chars are not allowed
+Bit_InvalidFormat_General,Invalid Format
+Bit_InvalidValue_Code,Invalid Code Value
+Bit_InvalidValue_DocumentCode,Invalid DocumentCode Value
+Bit_InvalidValue_Email,Invalid Email Value
+Bit_InvalidValue_Fax,Invalid Fax Value
+Bit_InvalidValue_General,Invalid Value
+Bit_InvalidValue_Name,Invalid Name Value
+Bit_InvalidValue_Phone,Invalid Phone Value
+Bit_InvalidValue_Prefix,Invalid Prefix Value. {0} Prefix can not be Empty. {1} It Is Expected Numeric String {2} 4 characters maximum
+Bit_InventProduct_MakatFormat,Unacceptable symbols
+Bit_InventProduct_MakatIsEmpty,Can not be Empty
+Bit_InventProduct_QuantityEditFormat,Wrong quantity edit format
+Bit_InventProduct_QuantityOriginalFormat,QuantityOriginalFormat
+Bit_IsEmpty_Barcode,Barcode can not be Empty
+Bit_IsEmpty_Code,Code can not be Empty
+Bit_IsEmpty_DocumentCode,DocumentCode can not be Empty
+Bit_IsEmpty_General,Code can not be Empty
+Bit_IsEmpty_Makat,Makat can not be Empty
+Bit_IsEmpty_Name,Name can not be Empty
+Bit_IsEmpty_Number,Number can not be Empty
+Bit_IsEmpty_Prefix,Prefix or Suffix can not be Empty
+Bit_Location_CodeEmpty,Name can not be empty
+Bit_Location_CodeExist,Location with such code already exists
+Bit_MessageTypeCaption_Error,Error
+Bit_MessageTypeCaption_ErrorDB,ErrorDB
+Bit_MessageTypeCaption_Fatal,Fatal
+Bit_MessageTypeCaption_SimpleTrace,Simple Trace
+Bit_MessageTypeCaption_Trace,Trace
+Bit_MessageTypeCaption_TraceParser,TraceParser
+Bit_MessageTypeCaption_TraceParserResult,TraceParserResult
+Bit_MessageTypeCaption_TraceProvider,TraceProvider
+Bit_MessageTypeCaption_TraceProviderResult,TraceProviderResult
+Bit_MessageTypeCaption_TraceRepository,TraceRepository
+Bit_MessageTypeCaption_TraceRepositoryResult,TraceRepositoryResult
+Bit_MessageTypeCaption_Warning,Warning
+Bit_MessageTypeCaption_WarningParser,WarningParser
+Bit_MessageTypeCaption_WarningRepository,WarningRepository
+Bit_NoError_General,
+Bit_Product_MakatFormat,Unacceptable symbols
+Bit_Product_MakatIsEmpty,Can not be Empty
+Bit_Product_MakatIsNotUnique,Makat is not unique
+Bit_Product_PriceBuyFormat,Incorrect format
+Bit_Product_PriceSaleFormat,Incorrect format
+Bit_SameCodeExist_Document,Document with the Same DocumentCode Exist in DB
+Bit_SameCodeExist_General,Object with the Same Code Exist in DB
+Bit_SameCodeExist_Itur,Itur with the Same Code Exist in DB
+Bit_SameCodeExist_Location,Location with the Same Code Exist in DB
+Bit_SameCodeExist_ProductBarcode,Product with the Same Barcode Exist in DB
+Bit_SameCodeExist_ProductMakat,Product with the Same Makat Exist in DB
+Bit_Validate_Empty,Can't be empty
+Bit_Validate_Format,Wrong format
+Bit_ValidateErrorMessage_BarcodeExistInDB,Same Barcode [{0}] Exist in DB
+Bit_ValidateErrorMessage_BarcodeIsEmpty,Barcode : [{0}] Is Empty
+Bit_ValidateErrorMessage_BarcodeNotExistInDB,Barcode [{0}] Exist in Data Row, but Not Exist in Catalog as Barcode
+Bit_ValidateErrorMessage_DocumentCodeExistInDB,Document with Same Code [{0}] Exist in DB
+Bit_ValidateErrorMessage_Error,Parser Error : 
+Bit_ValidateErrorMessage_FileIsEmpty,File : [{0}] Is Empty or Is not Exist
+Bit_ValidateErrorMessage_FileIsNotExist,File : [{0}] Is not Exist
+Bit_ValidateErrorMessage_IturCodeExistInDB,Itur with Same Code [{0}] Exist in DB
+Bit_ValidateErrorMessage_IturCodeNotExistInDB,IturCode [{0}] Exist in Data Row, but Not Exist in Itur as Code
+Bit_ValidateErrorMessage_LocationCodeExistInDB,Location with Same Code [{0}] Exist in DB
+Bit_ValidateErrorMessage_LocationCodeNotExistInDB,LocationCode [{0}] Exist in Data Row, but Not Exist in Location as Code
+Bit_ValidateErrorMessage_MakatAndBarcodeNotExistInDB,Barcode (or Makat) [{0}] Exist in Data Row, but Not Exist in Catalog
+Bit_ValidateErrorMessage_MakatExistInDB,Same Makat [{0}] Exist in DB
+Bit_ValidateErrorMessage_MakatIsEmpty,Makat : [{0}] Is Empty
+Bit_ValidateErrorMessage_MakatNotExistInDB,Makat [{0}] Exist in Data Row, but Not Exist in Catalog as Makat
+Bit_ValidateErrorMessage_NoExpectedLengthString,Length of Input String does not match the Expected Length : [{0}]
+Bit_ValidateErrorMessage_NoExpectedMarker,Data Row no Expected Marker : [{0}]
+Bit_ValidateErrorMessage_NoHeaderLine,There Is no Header Line or not the Marker Header in the First Line of File :  [{0}]
+Bit_ValidateErrorMessage_NoMatchNumberSubstrings,Does not Match the Number of Substrings in the Data Row with the Expected :  [{0}]
+Bit_ValidateErrorMessage_NoOneDataRow,There Is no One Data Row in File : [{0}]
+Bit_ValidateErrorMessage_ParentMakatIsEmpty,Parent Makat : [{0}] Is Empty
+Bit_ValidateErrorMessage_SessionCodeExistInDB,Session with Same Code [{0}] Exist in DB
+Bit_ValidateErrorMessage_Warning,Parser Warning : 
+Command_Accept,Accept
+Command_Add,Add
+Command_AlignBottom,Bottom
+Command_AlignLeft,Left
+Command_AlignRight,Right
+Command_AlignSameHeight,Same Height
+Command_AlignSameWidth,Same Width
+Command_AlignTop,Top
+Command_Apply,Apply
+Command_AutorImportFromPda,Auto Import from PDA
+Command_BranchPostAddBranch,Create new Branch
+Command_BranchPostAddInventor,Create new Inventor
+Command_BranchPostBranchDashboard,Branch Dashboard
+Command_BranchPostEditBranch,Edit branch
+Command_BranchPostHomeDashboard,Home Dashboard
+Command_BranchPostMainDashboard,Main Dashboard
+Command_BringForward,Bring to Front
+Command_Browse,Browse
+Command_BuildNewInventor,Build New Inventory
+Command_BuildNewProcess,Add New Process
+Command_Cancel,Cancel
+Command_ChangeCurrentInventor,Change Current Inventor
+Command_Clear,Clear
+Command_ClearByConfig,Clear
+Command_ClearItemsFromItur,Clear
+Command_Clone,Clone
+Command_Close,Close
+Command_Compare,Compare...
+Command_ContinueCurrentInventor,Continue Inventory which is In Process
+Command_Copy,Copy
+Command_Create,Create
+Command_CreateAndNavigateToProcessInventor,Create New Inventor >>
+Command_CreateNewInventor,Create New Inventor
+Command_CurrentInventor,Current Inventor
+Command_CustomerPostAddBranch,Create new Branch
+Command_CustomerPostAddCustomer,Create new Customer
+Command_CustomerPostCustomerDashboard,Customer Dashboard
+Command_CustomerPostEditCustomer,Edit customer
+Command_CustomerPostHomeDashboard,Home Dashboard
+Command_CustomerPostMainDashboard,Main Dashboard
+Command_Delete,Delete
+Command_DeleteAll,Delete All
+Command_DeleteAllChecked,Delete All Checked
+Command_DeleteAllCheckSelect,Delete Checked
+Command_DeleteAllWithoutChild,Delete All Without Child
+Command_DeleteFromMainDB,Delete from Main DB
+Command_DeleteNoneInCatalog,Delete All Not Existing in Catalog
+Command_DeleteWithItems,Delete with Items
+Command_DeleteWithoutChild,Delete without children
+Command_DevicePDAStatistic,PDA Statistic
+Command_DocumentHeaderStatistic,DocumentHeader
+Command_Down,Down
+Command_Edit,Edit
+Command_EditCustomerOptions,Edit Customer Settings
+Command_Export,Export
+Command_Filter,Filter
+Command_Find,Find
+Command_Import,Import
+Command_ImportExport,Import - Export
+Command_Info,Info
+Command_InventorPostEditInventor,Edit inventor
+Command_InventorPostHomeDashboard,Home Dashboard
+Command_InventorPostInventorDashboard,Inventor Dashboard
+Command_InventorPostInventorForm,Inventor form
+Command_InventorPostMainDashboard,Main Dashboard
+Command_More,More...
+Command_MultiAdd,Multi Add
+Command_NavigateToGrid,View
+Command_OK,Ok
+Command_OpenInExplorer,Open in explorer
+Command_OpenScript,Open script
+Command_Pack,Pack
+Command_Planogram,Planogram
+Command_Print,Print
+Command_Print_ByLocationCode_Report,Print Reports for Location
+Command_Print_ByTag_Report,Print Reports by Tag
+Command_Print_Report,Print Report
+Command_RefreshStatus,Refresh Status
+Command_Rename,Rename
+Command_RepairFromDb,Repair from DB
+Command_Report,Report
+Command_Reset,Reset
+Command_Reset_ToDefaultProcess,Back to Root Process
+Command_ResetErrorStatus,Reset error status
+Command_Run,Run
+Command_RunByConfig,Run
+Command_Save,Save
+Command_SaveScript,Save Script
+Command_Search,Search
+Command_Select,Select...
+Command_SendBackward,Send to Back
+Command_SessionStatistic,Session
+Command_SetAsDefault,Set as Default
+Command_SetAsDefaultLikeInCustomer,Default from Customer
+Command_SetAsProcess,Set as Process
+Command_SetOptions,Edit Inventor Options
+Command_ShowConfig,Config
+Command_ShowIni,Ini
+Command_ShowLogByConfig,Log
+Command_Statistic,Statistic
+Command_ToProcess,To Process
+Command_ToProcessInventor,To Process Inventor >>
+Command_Unpack,Unpack
+Command_Up,Up
+Command_Update,Update
+Command_UpdateCatalog,Update
+Command_UpdateInventorDateTime,Update
+Command_Validate,Validate
+Command_View,View
+Command_ViewConfig,View Config
+Command_ViewLog,View Log
+Command_WorkerStatistic,Worker
+Common_FromImportToGrid,Open Grid
+Constant_Barcode,Barcode
+Constant_Code,Code
+Constant_ERP,ERP Code
+Constant_Makat,Makat
+Constant_Number,Number
+Constant_Path,Path
+Constant_Product,Product
+Control_Pagination_Of,of {0}
+Domain_Adapter,Adapter
+Domain_Branch,Branch
+Domain_Customer,Customer
+Domain_DevicePDA,PDA - Documents
+Domain_Family,Family
+Domain_Inventor,Inventor
+Domain_InventProduct,Invent Product
+Domain_InventProductAnalyze,Invent Product Analyze
+Domain_Itur,Itur
+Domain_Itur_NAME,ITUR
+Domain_Location,Location
+Domain_Product,Product
+Domain_Report,Report
+Domain_Section,Section
+Domain_StatusGroup,Status
+Domain_Supplier,Supplier
+Domain_Tag,Tag
+Domain_Template,Template
+Domain_UnitPlan,Unit Plan
+DomainUnknownName_UnknownDevice,UnknownDevice
+DomainUnknownName_UnknownFamily,UnknownFamily
+DomainUnknownName_UnknownLocation,UnknownLocation
+DomainUnknownName_UnknownPropertyStr,UnknownPropertyStr
+DomainUnknownName_UnknownSection,UnknownSection
+DomainUnknownName_UnknownSupplier,UnknownSupplier
+DomainUnknownName_UnknownUnitType,UnknownUnitType
+DomainUnknownName_UnknownWorker,Unknown Worker
+DownloadButtonText,Download
+Err_ConnectionDBException, Connection Error 
+GoToPage,Go to Page
+InventProductListDetailsView_Clalit_Column_PropertyStr1,serial
+InventProductListDetailsView_Clalit_Column_PropertyStr10,vend_id 
+InventProductListDetailsView_Clalit_Column_PropertyStr11,last_upd_date 
+InventProductListDetailsView_Clalit_Column_PropertyStr12,purchase_date 
+InventProductListDetailsView_Clalit_Column_PropertyStr13,Item_Id
+InventProductListDetailsView_Clalit_Column_PropertyStr14,client_id 
+InventProductListDetailsView_Clalit_Column_PropertyStr15,purchase_date
+InventProductListDetailsView_Clalit_Column_PropertyStr2,prod_id
+InventProductListDetailsView_Clalit_Column_PropertyStr3,manufacturer 
+InventProductListDetailsView_Clalit_Column_PropertyStr4,model_id 
+InventProductListDetailsView_Clalit_Column_PropertyStr5,descr 
+InventProductListDetailsView_Clalit_Column_PropertyStr6,configuration_stat_id 
+InventProductListDetailsView_Clalit_Column_PropertyStr7,leasingProperty 
+InventProductListDetailsView_Clalit_Column_PropertyStr8,pc_screen_size 
+InventProductListDetailsView_Clalit_Column_PropertyStr9,longtext 
+InventProductListDetailsView_Column_SupplierCode,SupplierCode
+InventProductListDetailsView_Compare_Column_PropertyFloat1,In1
+InventProductListDetailsView_Compare_Column_PropertyFloat2,In2
+InventProductListDetailsView_Compare_Column_PropertyFloat3,Difference
+InventProductListDetailsView_Compare_Column_PropertyFloat4,Result
+InventProductListDetailsView_Compare_Column_PropertyStr1,File1
+InventProductListDetailsView_Compare_Column_PropertyStr2,File2
+InventProductListDetailsView_InventProduct_Column_IPValueStr1,Batch
+InventProductListDetailsView_InventProduct_Column_IPValueStr2,Date
+InventProductListDetailsView_Merkava_Column_Code,Code
+InventProductListDetailsView_Merkava_Column_PropertyStr1,Equipment 
+InventProductListDetailsView_Merkava_Column_PropertyStr10,Purchase Date 
+InventProductListDetailsView_Merkava_Column_PropertyStr11,Purchase Value 
+InventProductListDetailsView_Merkava_Column_PropertyStr12,Property 12
+InventProductListDetailsView_Merkava_Column_PropertyStr13,Property 13
+InventProductListDetailsView_Merkava_Column_PropertyStr17,Property 17
+InventProductListDetailsView_Merkava_Column_PropertyStr18,Property 18
+InventProductListDetailsView_Merkava_Column_PropertyStr19,Property 19
+InventProductListDetailsView_Merkava_Column_PropertyStr2,Description Equipment 
+InventProductListDetailsView_Merkava_Column_PropertyStr20,Property 20
+InventProductListDetailsView_Merkava_Column_PropertyStr3,Reduced Property Value 
+InventProductListDetailsView_Merkava_Column_PropertyStr4,Field Sorting 
+InventProductListDetailsView_Merkava_Column_PropertyStr5,Hotel 
+InventProductListDetailsView_Merkava_Column_PropertyStr6,Property 6
+InventProductListDetailsView_Merkava_Column_PropertyStr7,Property 7
+InventProductListDetailsView_Merkava_Column_PropertyStr8,UID-RFID 
+InventProductListDetailsView_Merkava_Column_PropertyStr9,Notes 
+InventProductListDetailsView_Nativ_Column_PropertyStr1,Property 1
+InventProductListDetailsView_Nativ_Column_PropertyStr10,Property 10
+InventProductListDetailsView_Nativ_Column_PropertyStr11,Property 11
+InventProductListDetailsView_Nativ_Column_PropertyStr12,Property 12
+InventProductListDetailsView_Nativ_Column_PropertyStr13,Property 13
+InventProductListDetailsView_Nativ_Column_PropertyStr14,Property 14
+InventProductListDetailsView_Nativ_Column_PropertyStr15,Property 15
+InventProductListDetailsView_Nativ_Column_PropertyStr16,Property 16
+InventProductListDetailsView_Nativ_Column_PropertyStr17,Property 17
+InventProductListDetailsView_Nativ_Column_PropertyStr18,Property 18
+InventProductListDetailsView_Nativ_Column_PropertyStr19,Property 19
+InventProductListDetailsView_Nativ_Column_PropertyStr2,Property 2
+InventProductListDetailsView_Nativ_Column_PropertyStr20,Property 20
+InventProductListDetailsView_Nativ_Column_PropertyStr3,Property 3
+InventProductListDetailsView_Nativ_Column_PropertyStr4,Property 4
+InventProductListDetailsView_Nativ_Column_PropertyStr5,Property 5
+InventProductListDetailsView_Nativ_Column_PropertyStr6,Property 6
+InventProductListDetailsView_Nativ_Column_PropertyStr7,Property 7
+InventProductListDetailsView_Nativ_Column_PropertyStr8,Property 8
+InventProductListDetailsView_Nativ_Column_PropertyStr9,Property 9
+IturStatusGroup_AllDocsIsApprove,AllDocsIsApprove
+IturStatusGroup_DisableAndNoOneDoc,DisableAndNoOneDoc
+IturStatusGroup_DisableWithDocs,DisableWithDocs
+IturStatusGroup_Empty,Empty
+IturStatusGroup_Error,Error
+IturStatusGroup_None,All
+IturStatusGroup_NotApprove,NotApprove
+IturStatusGroup_OneDocIsApprove,OneDocIsApprove
+Log_Error1001,In  ProductParserList {0} - Is Not Exists
+Log_Error1003,In  InventProductSimpleParserList {0} - Is Not Exists
+Log_Error1004,Try Delete File  [{0}]
+Log_Error1005,File Path  Is Empty
+Log_Error1007,In  IturParserList {0} - Is Not Exists
+Log_Error1009,In  LocationParserList {0} - Is Not Exists
+Log_Error1010,In  {0} {1} - Is Not Exists
+Log_ParserFileErrorMessage_BarcodeExistInDB,Same Barcode [ {0} ] Exist in DB
+Log_ParserFileErrorMessage_BarcodeIsEmpty,Barcode : [ {0} ] Is Empty
+Log_ParserFileErrorMessage_BarcodeNotExistInDB,Barcode [ {0} ] Exist in Data Row, but Not Exist in Catalog as Barcode
+Log_ParserFileErrorMessage_BranchCodeExistInDB,Same BranchCode [ {0} ] Exist in DB
+Log_ParserFileErrorMessage_DocumentCodeExistInDB,Document with Same Code [ {0} ] Exist in DB
+Log_ParserFileErrorMessage_Error,Parser Error : 
+Log_ParserFileErrorMessage_FileIsEmpty,File : [ {0} ] Is Empty or Is not Exist
+Log_ParserFileErrorMessage_FileIsNotExist,File : [ {0} ] Is not Exist
+Log_ParserFileErrorMessage_FileTxtExpected,File : [ {0} ] must be text file
+Log_ParserFileErrorMessage_FileXlsxExpected,File : [ {0} ] must have .xlsx Format
+Log_ParserFileErrorMessage_IturCodeExistInDB,Itur with Same Code [ {0} ] Exist in DB
+Log_ParserFileErrorMessage_IturCodeIsEmpty,IturCode : [ {0} ] Is Empty
+Log_ParserFileErrorMessage_IturCodeNotExistInDB,IturCode [ {0} ] Exist in Data Row, but Not Exist in Itur as Code
+Log_ParserFileErrorMessage_KeyIsEmpty,Key : [ {0} ] Is Empty
+Log_ParserFileErrorMessage_KeyNotFind,Key : [ {0} ] Not Find
+Log_ParserFileErrorMessage_LocationCodeExistInDB,Location with Same Code [ {0} ] Exist in DB
+Log_ParserFileErrorMessage_LocationCodeIsEmpty,LocationCode : [ {0} ] Is Empty
+Log_ParserFileErrorMessage_LocationCodeNotExistInDB,LocationCode [ {0} ] Exist in Data Row, but Not Exist in Location as Code
+Log_ParserFileErrorMessage_MakatAndBarcodeNotExistInDB,Barcode (or Makat) [ {0} ] Exist in Data Row, but Not Exist in Catalog
+Log_ParserFileErrorMessage_MakatExistInDB,Same Makat [ {0} ] Exist in DB
+Log_ParserFileErrorMessage_MakatIsEmpty,Makat : [ {0} ] Is Empty
+Log_ParserFileErrorMessage_MakatNotExistInDB,Makat [ {0} ] Exist in Data Row, but Not Exist in Catalog as Makat
+Log_ParserFileErrorMessage_NoExpectedLengthString,Length of Input String does not match the Expected Length : [ {0} ]
+Log_ParserFileErrorMessage_NoExpectedMarker,Data Row no Expected Marker : [ {0} ]
+Log_ParserFileErrorMessage_NoHeaderLine,There Is no Header Line or not the Marker Header in the First Line of File :  [ {0} ]
+Log_ParserFileErrorMessage_NoMatchNumberSubstrings,Does not Match the Number of Substrings in the Data Row with the Expected :  [ {0} ]
+Log_ParserFileErrorMessage_NoOneDataRow,There Is no One Data Row in File : [ {0} ]
+Log_ParserFileErrorMessage_ParentMakatIsEmpty,Parent Makat : [ {0} ] Is Empty
+Log_ParserFileErrorMessage_SessionCodeExistInDB,Session with Same Code [ {0} ] Exist in DB
+Log_ParserFileErrorMessage_TableNameIsEmpty,Table Name Is Empty
+Log_ParserFileErrorMessage_TableNotExistInDB,Table Not Exist In DB
+Log_ParserFileErrorMessage_Warning,Parser Warning : 
+Log_TraceParser1001,Parser Error And Message : 
+Log_TraceProvider1101,[{0}] is [{1}]
+Log_TraceProvider1102,From  [{0}]
+Log_TraceProvider1103,Import Option - [{0}]
+Log_TraceRepository1001,Start process: Clear Table [{0}] Via ADO.NET
+Log_TraceRepository1005,Start process: Select Ver DB [{0}]  Via ADO.NET
+Log_TraceRepository1006,End process: Select Ver DB
+Log_TraceRepository1015,Export to [{0}] is [{1}]
+Log_TraceRepository1040,[{0}] is [{1}]
+Log_TraceRepository1045,Clear [{0}]
+Log_TraceRepositoryResult1001,subFolder : [{0}]
+Log_TraceRepositoryResult1002,fileDB : [{0}]
+Log_TraceRepositoryResult1003,Sql : [{0}]
+Log_TraceRepositoryResult10031,[{0}] in DB [{1}]
+Log_TraceRepositoryResult1004,Start Commit process 
+Log_TraceRepositoryResult1005,End Commit process
+Log_TraceRepositoryResult1006,[{0}] in DB {1}\\{2}
+Log_TraceRepositoryResult1007,End process Clear 
+Log_TraceRepositoryResult1008,Start Process: Copy Table [{0}] Via BulkCopy
+Log_TraceRepositoryResult1009,From DB [{0}] To DB [{1}] 
+Log_TraceRepositoryResult1011,Add {0} {1} in DB [{2}]
+Log_TraceRepositoryResult1015,Clear [{0}] Via ADO.NET
+Log_TraceRepositoryResult1016,Start Write to File [{0}] 
+Log_TraceRepositoryResult1020,Start Fill [{0}]
+Log_TraceRepositoryResult1021,End Fill [{0}]
+Log_TraceRepositoryResult1035,Start process: Commit Data To DB [{0}] 
+Log_TraceRepositoryResult1036,End process: Commit Data To DB [{0}] 
+Log_TraceRepositoryResult1050,Parser Error And Message : 
+Log_TraceRepositoryResult1055,Copy Table [{0}] Via BulkCopy
+Log_TraceRepositoryResult1056,Delete File  [{0}]
+Log_TraceRepositoryResult1057,Cancel Write to File [{0}] 
+Log_TraceRepositoryResult1058,Write to File [{0}] 
+Log_TraceRepositoryResult1059,Cancel Insert [{0}] in DB [{1}] from file [{2}]
+Log_TraceRepositoryResult1061,Source Table [{0}] in DB [{1}] {2} have [{3}] Row
+Log_TraceRepositoryResult1062,Destination Table [{0}] in DB [{1}] {2} after Copy, have [{3}] Row
+Mdi_AllBranches,Branches
+Mdi_Application,Application
+Mdi_Branch,Branch
+Mdi_CatalogInfoForBranch,Catalog Info for Branch
+Mdi_CatalogInfoForCustomer,Catalog Info for Customer
+Mdi_CatalogInfoForInventor,Catalog Info for Inventor
+Mdi_Customer,Customer
+Mdi_DomainObject,Domain Object
+Mdi_Family,Family
+Mdi_GetFromPdaLog,Get from PDA Log
+Mdi_Inventor,Inventor
+Mdi_InventorStatus,Inventor Status
+Mdi_InventProduct,Invent Product
+Mdi_InventProductSimple,Invent Product Advanced
+Mdi_InventProductSum,Invent Product Aggregate
+Mdi_Iturim,Iturim
+Mdi_LastBraches,Last Branches Used In Inventory
+Mdi_LastBrachesForCustomer,Last Branches For Customer Used In Inventory
+Mdi_LastCustomers,Last Customers Used In Inventory
+Mdi_LastCustomersBuild,Customers
+Mdi_LastInventors,Last Inventors
+Mdi_LastInventorsForBranch,Last Inventors for Branch
+Mdi_LastInventorsForCustomer,Last Inventors for Customer
+Mdi_Location,Location
+Mdi_Menu,Menu
+Mdi_PdaSendData,PDA Send Data
+Mdi_Planogram,Planogram
+Mdi_Reports,Reports
+Mdi_Section,Section
+Mdi_Statistic,Statistics
+Mdi_Supplier,Supplier
+Menu_Name_Adapters,Adapters
+Menu_Name_AddBranch,Add Branch
+Menu_Name_AddCustomer,Add Customer
+Menu_Name_AddInventor,Add Inventor
+Menu_Name_AddItem,Add Item
+Menu_Name_AddNewInventor,Add Inventor
+Menu_Name_AddToPackData,Add Selected to Code List
+Menu_Name_Catalog,Catalog
+Menu_Name_ChangeCatalog,Change Catalog
+Menu_Name_ChangeStatus,Change Inventor Status
+Menu_Name_ClearCodeList,Clear Code List
+Menu_Name_DownloadFromPDA,Download Files From PDA
+Menu_Name_EditBranch,Edit Branch
+Menu_Name_EditCustomer,Edit Customer
+Menu_Name_EditInventor,Edit Inventor
+Menu_Name_ERPExpected,ERP Expected
+Menu_Name_ExportERP,ExportERP
+Menu_Name_ExportPDA,ExportPDA
+Menu_Name_FromFtp,From Ftp
+Menu_Name_Ftp,Ftp
+Menu_Name_GetFromFtp,Get From Ftp
+Menu_Name_GetFromPDA,Get From PDA
+Menu_Name_GetFtp,Menu_Name_GetFtp
+Menu_Name_Iturim,Iturim
+Menu_Name_Location,Location
+Menu_Name_PackData,Pack Data
+Menu_Name_Profile,Profile
+Menu_Name_Properties,Properties
+Menu_Name_ReportFavorites,Reports Favorites
+Menu_Name_SaveZipInventor,Save/Zip Inventor
+Menu_Name_SearchBranch,Branch Grid
+Menu_Name_SearchCustomer,Customer Grid
+Menu_Name_SearchInventor,Inventor Grid
+Menu_Name_SendDataInMail,Send Data In Mail
+Menu_Name_SendZipOffice,Send Zip to Office
+Menu_Name_StartWizard,Wizard Create Inventor
+Menu_Name_ToFtp,To Ftp
+Menu_Name_UnpackData,Unpack Data
+Menu_Name_UploadToPDA,Upload File To PDA
+Message_CreateProfile,Do you want to ask create Profile via Service?
+Message_Repair,Do you want to restore objects via database relations?
+Message_ReportMissedInFileSystem,Report File doesn't exist in file system
+Msg_Add_Another_Branch,New branch successfully saved. Add another one?
+Msg_Add_Another_Customer,New customer successfully saved. Add another one?
+Msg_BackupDb,Backuping db files...
+Msg_Branch_Sdf_File_Missed,{0} file is missed. Application will create new one. Inherit database file from customer?
+Msg_CatalogNotEmpty,"Catalog exist (It is not Empty). If you want to Clear it and Import the new one - click ""Yes"""
+Msg_CheckingDb,Checking imported Databases for consistency
+Msg_Clear_Export_ERP,Do you really want to clear?
+Msg_Clear_Export_PDA,Do you really want to clear?
+Msg_Clear_Import,Do you really want to clear?
+Msg_Clear_Import_Directory,You are about to clear {0}. Are you sure?
+Msg_ClearDocument,Do you really want to clear Document (Related Products will be removed permanently)?
+Msg_Close_Application,Are you sure want close Application?
+Msg_Close_Application_Printing,Printing is in progress. Are you sure want close application?
+Msg_Common_Error_Occured,An Error has occured. Description is available in the Log File.
+Msg_ConfigurationSetExist,Configuration set with such Name already Exists
+Msg_Customer_Sdf_File_Missed,{0} file is missed. Application will create new one.
+Msg_Default_Adapter_Unaccessible,Your default adapter is unaccessible due to licensing permissions. Fallback adapter selected.
+Msg_Delete_Adapter_Link,Are you sure you want to delete Adapter Link?
+Msg_Delete_Branch,Are you sure want delete {0} ?
+Msg_Delete_Customer,Are you sure want delete {0} ?
+Msg_Delete_Document_Header,Are you sure you want to delete Document Header: {0} ?
+Msg_Delete_Familys,Are you sure want to delete Familys {0} ?
+Msg_Delete_Invent_Product,Are you sure you want to delete {0} {1} {2}?
+Msg_Delete_Invent_Product_NotExistInCatalog,Are you sure that you want to delete all inventory items which not exist in catalog?
+Msg_Delete_Inventor,Are you sure want delete {0} ?
+Msg_Delete_Itur,Are you sure you want to delete Itur(s): {0} ?
+Msg_Delete_IturHierarchical,There are Items in selected Itur(s). Are you sure that you want to delete Items in : {0} Itur(s)?
+Msg_Delete_Location,Are you sure you want to delete Location(s): {0} ?
+Msg_Delete_Parsing_Mask,Are you sure want to delete Masks for {0} Adapter?
+Msg_Delete_Product,Are you sure you want to delete Product(s): {0} ?
+Msg_Delete_Report,Are you sure want to delete Report {0}\{1} ?
+Msg_Delete_Section,Are you sure want to delete Section {0} ?
+Msg_Delete_Supplier,Are you sure want to delete Supplier {0} ?
+Msg_Delete_Suppliers,Are you sure want to delete Supplier(s) ?
+Msg_DynViewModelCanNotExport,Can Not Export
+Msg_DynViewModelCanNotImport,Can't Import. Check that Files exist.
+Msg_DynViewModelNotInitialaze,DynViewModel not Initialize
+Msg_FileNotFound,File {0} not found
+Msg_FilterTemplateExists,Filter template with such name already exists
+Msg_FilterWindow,Filter Window
+Msg_Incorrect_File_Format,Incorrect file format
+Msg_IturNotEmpty,Non-empty iturs were found. They would have been skipped during delete. Proceed?
+Msg_Migrate_Db_Done,Database scheme updated from version {0} to {1}{2}Backup path: {3}
+Msg_Migrate_Db_Done2,Database scheme updated.
+Msg_Migrate_Db_Error,Error while preparing db: {0}
+Msg_Migrate_Db_Error_Rollback,Database migration error has occured. Please contact administrator.{0}Database files will be rolled back to initial state.
+Msg_Migrate_Db_Error_Version,Your program version is older than database files.
+Msg_NotValidFileName,File name is not valid
+Msg_PrepareDatabase,Preparing database for first use...
+Msg_Recalculate_Itur_Status,Recalculation of itur statuses can take a lot of time. Do you want to proceed?
+Msg_ReportLinkFill,Table ReportLink filled with data from {0}
+Msg_RestoreDone,Restore done
+Msg_Rollback,Rolling back changes
+Msg_SearchWindow,Search Window
+Msg_SuppliersNotEmpty,There are some suppliers in DB. Do you want to clear them?
+Msg_Unhandled_Exception,Unhandled exception occured.
+Msg_UpdateDbScheme,Updating db scheme...
+Msg_Zip_Changes_Apply_After_Restart,Adapters changes will apply after application restart.
+Operator_Contains,Contains {0}
+Operator_DateTimeGreaterOrEqual, >= {0}
+Operator_DateTimeLessOrEqual, <= {0}
+Operator_EndsWith,Ends with {0}
+Operator_Equal, = {0}
+Operator_Greater, > {0}
+Operator_GreaterOrEqual, >= {0}
+Operator_Less, < {0}
+Operator_LessOrEqual, <= {0}
+Operator_Multiple, = {0}
+Operator_MultipleString, = {0}
+Operator_StartsWith,Starts with {0}
+PlanCanvas_mnuAssignLocation,Assign Location
+PlanCanvas_mnuAssignPicture,Assign Picture
+PlanCanvas_mnuAssignText,Assign Text
+Process_EmptyMainDB,New MainDB
+Process_EmptyUserSetting,New UserSetting
+Process_RootMainDB,Root MainDB
+Process_RootUserSetting,Root UserSetting
+Property_Branch_Code,Code
+Property_Branch_CodeERP,Code ERP
+Property_Branch_CodeLocal,Code Local
+Property_Branch_ContactPerson,Contact Person
+Property_Branch_CustomerCode,Customer Code
+Property_Branch_Name,Name
+Property_Branch_Phone,Phone
+Property_Customer_Address,Address
+Property_Customer_Code,Code
+Property_Customer_ContactPerson,Contact Person
+Property_Customer_Description,Description
+Property_Customer_Name,Name
+Property_Customer_Phone,Phone
+Property_Family_Code,Code
+Property_Family_Name,Name
+Property_Inventor_BranchCode,Branch Code
+Property_Inventor_Code,Code
+Property_Inventor_CustomerCode,Customer Code
+Property_Inventor_Description,Description
+Property_Inventor_InventorDate,Inventor Date
+Property_InventProduct_Barcode,Original Code From PDA
+Property_InventProduct_CodeFromPda,Input Type
+Property_InventProduct_ERPIturCode,ERPIturCode
+Property_InventProduct_FamilyCode,Family Code
+Property_InventProduct_Itur,Itur
+Property_InventProduct_IturCode,IturCode
+Property_InventProduct_Makat,Makat
+Property_InventProduct_PriceBuy,Price Buy
+Property_InventProduct_PriceSell,Price Sell
+Property_InventProduct_ProductName,Product Name
+Property_InventProduct_SectionCode,Section Code
+Property_InventProduct_SupplierCode,Supplier Code
+Property_Itur_Code,Code
+Property_Itur_ERPCode,ERP Code
+Property_Itur_LocationCode,Location Code
+Property_Itur_Number,Number
+Property_Itur_NumberPrefix,Prefix
+Property_Itur_NumberSuffix,Suffix
+Property_Itur_StatusGroupBit,Status Group Bit
+Property_Location_Code,Code
+Property_Location_Name,Name
+Property_PriceType_PriceBuy,Price Buy
+Property_PriceType_PriceExtra,Price Extra
+Property_PriceType_PriceSale,Price Sale
+Property_Product_Barcode,Barcode
+Property_Product_Makat,Makat
+Property_Product_PriceBuy,Price Buy
+Property_Product_PriceSale,Price Sale
+Property_Product_ProductName,Product Name
+Property_Product_Section,Section
+Property_Product_Supplier,Supplier
+Property_Section_Code,Code
+Property_Section_Name,Name
+Property_Supplier_Code,Code
+Property_Supplier_Name,Name
+Report_Menu_Caption_AuditConfig_AuditConfigDetaile,AuditConfigDetaile
+Report_Menu_Caption_Branch_BranchDetaile,BranchDetaile
+Report_Menu_Caption_Catalog_Catalog,Catalog
+Report_Menu_Caption_Customer_CustomerDetaile,CustomerDetaile
+Report_Menu_Caption_Device_DV1_01,Device Statistic
+Report_Menu_Caption_Device_DV1_02,Device Statistic - Quick Format
+Report_Menu_Caption_Device_DV1_03,Device Statistic on Bar Chart
+Report_Menu_Caption_DH3_2,Document Report Sum Quentity
+Report_Menu_Caption_Doc_DH1_02,Document Header Statistic
+Report_Menu_Caption_FM1_01,Family Detailed
+Report_Menu_Caption_Inventor_InventorDetaile,InventorDetaile
+Report_Menu_Caption_InventProduct_DetailedInventProduct,Detailed - InventProduct
+Report_Menu_Caption_IP1_02,InventProducts Compare
+Report_Menu_Caption_IP1_03,Report Compare Statistics
+Report_Menu_Caption_IP1_04,Report Compare- Property
+Report_Menu_Caption_IP1_05,InventProduct Sum by Itur
+Report_Menu_Caption_IS1_07,Summary Report per Supplier
+Report_Menu_Caption_IS1_12f,Summary by Family
+Report_Menu_Caption_IS1_60,Report Sum Quentity
+Report_Menu_Caption_IS1_70,Document Family Report
+Report_Menu_Caption_IS1_77,Itur Family Sum Quentity
+Report_Menu_Caption_IS1_80,Report Sum Quentity by Location
+Report_Menu_Caption_IS1_82,Report  by Location and Itur
+Report_Menu_Caption_IS1_82p,Report Sum Quentity by Barcode
+Report_Menu_Caption_IS1_85,Not Exist in all others Location
+Report_Menu_Caption_IT2_02,Document Report Sum Quentity
+Report_Menu_Caption_IT2_03,Document Family Report
+Report_Menu_Caption_IT2_04,Lady Comfort Family Report
+Report_Menu_Caption_IT2_05,Made4Net Report
+Report_Menu_Caption_IT2_06,Priority Keds ShowRoom Per Itur Report
+Report_Menu_Caption_IT2_07,Report by Itur with QuanityPartial
+Report_Menu_Caption_Itur_DetailedItur,Detailed - Itur
+Report_Menu_Caption_Itur_IT1_02,Plaine Itur List
+Report_Menu_Caption_Itur_IT1_03,Itur Barcodes
+Report_Menu_Caption_Iturs_CorporativeReport,CorporativeReport - Iturs
+Report_Menu_Caption_Iturs_DetailedBySectionReportBranch,Detailed By Section Report Branch - Iturs
+Report_Menu_Caption_Iturs_DetailedReportBranch,Detailed Report Branch - Iturs
+Report_Menu_Caption_Iturs_DocumentReport,Document Report -Iturs
+Report_Menu_Caption_Iturs_IS1_14,Summary Abs Report BranchWith Sections - Iturs
+Report_Menu_Caption_Iturs_IS1_22,Total Inventory Summary
+Report_Menu_Caption_Iturs_IS1_22p,Total Inventory Summary
+Report_Menu_Caption_Iturs_IS1_23p,Total Inventory Summary
+Report_Menu_Caption_Iturs_IS1_24,Summary Report Branch With Sections Ext
+Report_Menu_Caption_Iturs_IS1_25p,Warehouse Inventory Summary
+Report_Menu_Caption_Iturs_IS1_27p,Total Inventory Summary
+Report_Menu_Caption_Iturs_IS1_29p,Total Inventory Summary QuantityPartial
+Report_Menu_Caption_Iturs_IS1_32p,JAFORA Report
+Report_Menu_Caption_Iturs_IS1_53,Inventory Detailed Report
+Report_Menu_Caption_Iturs_IS1_53pt,Inventory Detailed Report with Date Time
+Report_Menu_Caption_Iturs_IS1_54,Inventory Detailed by Itur Report
+Report_Menu_Caption_Iturs_IS1_54sn,Report Sum by Itur Makat SN
+Report_Menu_Caption_Iturs_IS1_56,Itur Expected Report
+Report_Menu_Caption_Iturs_IS1_56nc,Items Not Exist In Catalog
+Report_Menu_Caption_Iturs_IS1_57,Inventory Detailed by Itur Report
+Report_Menu_Caption_Iturs_IS1_58,Inventory Makat- Itur Sum Report
+Report_Menu_Caption_Iturs_IS1_59,Summary Report - Boxes in pallet
+Report_Menu_Caption_Iturs_IS1_69,Summary Report - Pallet in Tag (Truck)
+Report_Menu_Caption_Iturs_IS1_74p,Documents Report - Family Sum Quantity
+Report_Menu_Caption_Iturs_IS1_75p,Lady Comfort Itur Family Report
+Report_Menu_Caption_Iturs_IS1_86,Report Count ByIturMakat More6
+Report_Menu_Caption_Iturs_IS1_90,Summary report - total asset counting per day
+Report_Menu_Caption_Iturs_IS1_92,Summary report - total asset counting per itur
+Report_Menu_Caption_Iturs_IS1_92L,Summary report - total asset counting per Location
+Report_Menu_Caption_Iturs_IS1_93,Report Without SN Supplier
+Report_Menu_Caption_Iturs_IS1_94,Report with ModifyDate
+Report_Menu_Caption_Iturs_IS1_95,Compare Quantity By Itur-Makat-Docs
+Report_Menu_Caption_Iturs_SummaryReportBranch,Summary Report Branch - Iturs
+Report_Menu_Caption_Iturs_SummaryReportBranchSections,Summary Report BranchWith Sections - Iturs
+Report_Menu_Caption_Iturs_SummaryReportFamilyBranch,Summary Report Family - Iturs
+Report_Menu_Caption_Iturs_SummaryReportIturBranch,Summary Report Iturs - Iturs
+Report_Menu_Caption_Iturs_SummaryReportLocationBranch,Summary Report Locations - Iturs
+Report_Menu_Caption_ItursItur_DocumentReport,Document Report -Itur
+Report_Menu_Caption_ItursIturDoc_DocumentReport,Document Report -Doc
+Report_Menu_Caption_Rep_IS1_62,Detailed Report - Iturs
+Report_Menu_Caption_Rep_IS1_62b,Detailed Report blank - Itur
+Report_Menu_Caption_Rep_IS1_62n,Detailed Report by Barcode-Itur
+Report_Menu_Caption_Rep_IS1_63,Detailed Report by barcode
+Report_Menu_Caption_Rep_IS1_64,Detailed Report - Iturs
+Report_Menu_Caption_Rep_IS1_65,Sfira
+Report_Menu_Caption_Rep_IS1_83,Inventory Report by Location
+Report_Menu_Location_L1_01,Location Detailed
+Report_Menu_Location_L1_02,TagLocation Detailed
+Report_Menu_Location_L1_03,Tag Location Count
+Report_Menu_Location_L1_04,Import Locations with Tag
+Report_Menu_Section_SK1_01,Section Detailed
+Report_Menu_Supplier_SP1_01,Supplier Detailed
+Report_Menu_Supplier_SP1_02,Supplier-Itur Detailed
+Report_Menu_Supplier_SP1_03,Itur-Supplier Detailed
+Selected_Adapter_Not_Equals_CustomerAdapter,Selected Adapter not equals Adapter for Customer
+SortAsc,{0} (ASC)
+SortDesc,{0} (DESC)
+SortFileGrid_DateAndTime,Date and Time
+SortFileGrid_FileName,File
+Status_ConvertDataErrorMessage_CodeIsEmpty,Code Is Empty in Data Row [{0}] 
+Status_ConvertDataErrorMessage_FKCodeIsEmpty,FK Code Is Empty in Data Row [{0}] 
+Status_ConvertDataErrorMessage_InvalidValue,Invalid Value in Data Row [{0}]
+Status_ConvertDataErrorMessage_SameCodeExist,Object with the Same Code [{0}] Exist in DB
+Status_DocumentStatusTitle_None,None
+Status_DocumentStatusTitle_NoOneDoc,No One Document
+Status_DocumentStatusTitle_OneDocIsApprove,One Document Is Approve
+Status_DocumentStatusTitle_OneDocIsNotApprove,One Document Is Not Approve
+Status_DocumentStatusTitle_SomeDocIsApprove,Some Documents And This Is Approve
+Status_DocumentStatusTitle_SomeDocsIsNotApprove,Some Documents And This Is Not Approve
+Status_IturStatusGroupTitle_AllDocsIsApprove,All Docs Are Approve
+Status_IturStatusGroupTitle_DisableAndNoOneDoc,Disable And No One Doc
+Status_IturStatusGroupTitle_DisableWithDocs,Disable With Docs
+Status_IturStatusGroupTitle_Empty,Empty
+Status_IturStatusGroupTitle_Error,Error
+Status_IturStatusGroupTitle_None,All
+Status_IturStatusGroupTitle_NotApprove,Not Approve
+Status_IturStatusGroupTitle_OneDocIsApprove,One Doc Is Approve
+Status_IturStatusTitle_AllDocIsApprove,Some of Documents Is Approve
+Status_IturStatusTitle_AnyDocIsNotApprove,Some of Documents Is Not Approve
+Status_IturStatusTitle_DisableAndAllDocIsApprove,Disable And Some of Documents Is Approve
+Status_IturStatusTitle_DisableAndAnyDocIsNotApprove,Disable And Some of Documents Is Not Approve
+Status_IturStatusTitle_DisableAndNoOneDoc,Disable And No One Document
+Status_IturStatusTitle_DisableAndOneDocIsApprove,Disable And One Document Is Approve
+Status_IturStatusTitle_DisableAndOneDocIsNotApprove,Disable And One Document Is Not Approve
+Status_IturStatusTitle_DisableAndSomeDocIsApprove,Disable And Some of Documents Is Approve
+Status_IturStatusTitle_DisableAndSomeDocIsNotApprove,Disable And Some of Documents Is Not Approve
+Status_IturStatusTitle_None,None
+Status_IturStatusTitle_NoOneDoc,No One Document
+Status_IturStatusTitle_OneDocIsApprove,One Document Is Approve
+Status_IturStatusTitle_OneDocIsNotApprove,One Document Is Not Approve
+Status_IturStatusTitle_SomeDocIsApprove,Some of Documents Is Approve
+Status_IturStatusTitle_SomeDocIsNotApprove,Some of Documents Is Not Approve
+Status_IturStatusTitle_WarningConvert,Error
+String,
+StringReport_Menu_Caption_Iturs_IS1_69,Report_Menu_Caption_Iturs_IS1_69
+Validation_DirectoryNotExist,Directory doesn't exist
+Validation_File_Not_Exist,File doesn't exist
+Validation_FileNotExist,File doesn't exist
+Validation_Files_Cant_Equal,Files can't be equal
+Validation_Not_Valid_Directory,Not valid directory
+Validation_Not_Valid_File,Not valid file
+Validation_Not_Valid_Path,Path is not valid
+GUI_,GUI
+Menu_UserContext,User Context
+Menu_Claims,Claims
+Menu_Login,Login
+Menu_Logout,Logout
+Menu_Home,Home
+Menu_About,About
+Menu_Contact,Contact
+Menu_Profile,Profile
+Menu_Register,Register
+Profile_Please_enter_your_details,Please enter your Details
+Profile_Data_Server_Address,Data Server Address
+Profile_Server_open_Successfuly,Data Server open Successfully
+Profile_Process_Code,Process Code
+Profile_DB_Path,DB Path
+Login_Please_enter_your_details,Please enter your Details
+Login_Email_address,Email Address
+Login_Password,Password
+Login_Submit,Submit
+Login_Register,Register
+Register_Please_enter_your_details,Please enter your details
+Register_Email_address,Email
+Register_Password,Password
+Register_Confirm_Password,Confirm Password
+Register_Registered_Successfuly,Registered Successfuly
+Register_Cant_register,Can't register
+Menu_GetDataTest,Test Data
+Register_Create_User_Account,Create a User Account
+Register_email,email
+Register_Email_will_be_use_as_login_for_your_account,Email will be use as login for your account
+Register_Already_a_Member,Already a Member
+Register_password,password
+Register_Password_for_your_account,Password for your account
+Register_Confirm_password_for_your_account,Confirm password for your account
+Profile_TopInfo1,Profile data is used to access and determine valid operations with data of Count4U
+Profile_TopInfo2,Settings can be changed when user is granted rights and take effect immediately after the change
+Profile_serverAddresslHelp,Select address of data server Count4U, where is your data stored
+Profile_processCodeHelp,Select your processe code in Count4U
+Profile_customerCodeHelp,Select your customer code in Count4U
+Profile_branchCodeHelp,Select your branch code in Count4U
+Profile_inventorCodeHelp,Select your inventor code in Count4U
+Menu_Upload,Upload
+Menu_Download,Download
+Select_Files_from,From
+Select_Files_to_work1,Select Files from Path above.
+Select_Files_to_work2,Selected Files will be displayed in List.
+Select_Files_to_work3,Selected Files will be download.
+Server_Count4UWebAPI_not_reachable,Server Count4U.WebAPI is not reachable. Check if Server is running
+Select_Files,Select Files
+Size,Size
+Last_modified,Last modified
+Type,Type
+Loaded,Loaded
+Load,Load
+Menu_Trace,Trace
+Itur_RefreshStatus,Refresh
+Itur_RefreshStatusDone,Done
+Itur_ClearStatusBit,Clear Status
+Itur_RefreshStatusAsync,Refresh Async
+Itur_RefreshStatusParallel,Refresh Parallel
+Menu_ImportFromPda,Import from PDA
+Imported,Imported
+Import,Import
+Menu_NativPlus,Nativ +
+Change_Password,Change Password
+Old_Password,Old Password
+New_Password,New Password
+Confirm_Password,Confirm Password
+Property_Inventor_CustomerContextName,Customer Name
+Register_customer_code_from_Count4U,Customer Code from Count4U
+Register_customer_name_use_as_lable_for_customer,Customer Name will be use as lable for Customer
+Property_Use_Android,Use Android
+Property_Manage_Profile,Manage Profile
+Property_Database,Database
+Register_User,User
+Property_Permissions,Permissions
+Property_Inventor_CustomerName,Customer Name
+Register_customer_name_for_web,Сustomer Name for Web

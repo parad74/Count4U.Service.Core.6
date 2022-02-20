@@ -1,0 +1,364 @@
+﻿@page "/customerprofileanduseredit/{customerCode}/{email}"
+@inherits CustomerProfileAndUserEditBase
+@attribute [Authorize(Policy = UserPolicy.IsManager)]
+
+<style type="text/css">
+    .fa_custom {
+        color: #0b960f
+    }
+
+    .fa_custom_white {
+        color: #ffffff
+    }
+
+    .select_border_color {
+        /*    border: 1px solid #0b960f;*/
+        border-radius: .1rem;
+    }
+</style>
+
+@if (this._profileAndUserModel == null)
+{
+    <p><em>Loading...</em></p>
+}
+else if (LocalizationResources == null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+
+<div class="bg-success d-flex justify-content-between mb-2">
+    <div class="bg-success p-1 text-white"> &nbsp; Customer Edit&nbsp;</div>
+    <div class="bg-success p-1">
+        @*<i class="fa fa-pencil text-white"></i>*@
+        &nbsp;<span class="oi oi-pencil text-white" aria-hidden="true"></span> &nbsp;
+        @*https://getbootstrap.com/docs/4.0/components/breadcrumb/*@
+    </div>
+    
+</div>
+    <div class="row pr-3">
+
+        <div class="col-10 profile-menu-border">
+            <div class="card" style="border:none">
+                <div class="card-body" style="border:none">
+ 
+                    <EditForm Model="@_profileAndUserModel" OnValidSubmit="@EditOrRegisterAsync">
+                        <DataAnnotationsValidator />
+                        <ValidationSummary />
+
+                        <div class="form-group row">
+                            <label class="col-form-label col-sm-3 px-0" for="customerCode">@LocalizationResources.Property_Inventor_CustomerCode&nbsp;</label>
+                            <div class="col-sm-6 px-0">
+                                <InputText id="customerCode" readonly class="form-control"
+                                           @bind-Value="@_profileAndUserModel.RegisterModel.CustomerCode"
+                                           placeholder=@LocalizationResources.Register_customer_code_from_Count4U />
+                                <ValidationMessage For="@(() => _profileAndUserModel.RegisterModel.CustomerCode)" />
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label class="col-form-label col-sm-3 px-0" for="customerCode">Date Created&nbsp;</label>
+                            <div class="col-sm-6 px-0">
+                                <InputText id="dateCreated" readonly class="form-control"
+                                           @bind-Value="@_profileAndUserModel.RegisterModel.DateCreated" />
+                            </div>
+                        </div>
+
+                        <div class="form-group  row">
+                            <label class="col-form-label col-sm-3 px-0" for="email">@LocalizationResources.Register_Email_address&nbsp;</label>
+                            <div class="col-sm-6 px-0">
+                                <InputText id="email" readonly class="form-control" @bind-Value="@_profileAndUserModel.RegisterModel.Email" dissable
+                                           placeholder="@LocalizationResources.Register_Email_will_be_use_as_login_for_your_account" />
+                                <ValidationMessage For="@(() => _profileAndUserModel.RegisterModel.Email)" />
+                            </div>
+                        </div>
+
+
+                        @if (this._profileAndUserModel.ProfileFile != null)
+                        {
+                            <div class="form-group row">
+                                <label class="col-form-label col-sm-3 px-0" for="customerName">@LocalizationResources.Property_Inventor_CustomerName</label>
+                                <div class="col-sm-6 px-0">
+                                        <InputText id="customerName" readonly=@IsSubmit  class="form-control" @bind-Value="@_profileAndUserModel.ProfileFile.CustomerName"
+                                                   placeholder=@LocalizationResources.Register_customer_name_for_web />
+                                        <ValidationMessage For="@(() => _profileAndUserModel.ProfileFile.CustomerName)" />
+                                </div>
+                            </div>
+
+
+                            <div class="form-group row">
+                                <label class="col-form-label col-sm-3 px-0" for="description">@LocalizationResources.Property_Inventor_Description</label>
+                                <div class="col-sm-6 px-0">
+                                        <InputText id="description" readonly=@IsSubmit class="form-control" @bind-Value="@_profileAndUserModel.ProfileFile.CustomerDescription" />
+                                </div>
+                            </div>
+
+                        }
+
+                        <div class="form-group row">
+                            <label class="col-form-label col-sm-3 px-0">Inherit Profile from</label>
+             
+                            <div class="col-sm-9 px-0">
+                                <InputRadioGroup @bind-Value="_profileAndUserModel.RegisterModel.InheritProfile">
+                                    <div class="row mt-sm-2">
+                                        <div class="col-sm-4  pl-4 ml-sm-2">
+                                            <InputRadio class="form-check-input" id="profile-default" 
+                                                            disabled="@IsSubmit" 
+                                                        Value="@InheritProfileString.Default" />
+                                            &nbsp; <label class="form-check-label" for="profile-default">Default</label>
+                                        </div>
+                                        <div col-sm-5>
+                                            <button class="btn btn-outline-success btn-sm" style="visibility: hidden;" type="button">@LocalizationResources.Select_Files</button> &nbsp; &nbsp;
+                                            <span>&nbsp;</span>
+                                        </div>
+
+                                        @*<div class="col">  </div>*@
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-4  pl-4 ml-sm-2">
+                                            <InputRadio class="form-check-input" id="profile-fromfile" 
+                                                            disabled="@IsSubmit" 
+                                                        Value="@InheritProfileString.File" />
+                                            &nbsp; <label class="form-check-label" for="profile-fromfile">File</label>
+                                        </div>
+                                        @if (_profileAndUserModel.RegisterModel.InheritProfile == @InheritProfileString.File)
+                                            {
+                                            <div col-sm-5>
+                                                @*<InputFile OnChange="OnInputFileChange" @ref="refInputFile" class="btn btn-outline-success  btn-sm col-3" />*@
+                                                <button id="filterinput" class="btn btn-outline-success btn-sm" type="button" @onclick="@(() => OnButtonClick("myInput"))">@LocalizationResources.Select_Files</button> &nbsp; &nbsp;
+                                                @if (this._selectedFile != null)
+                                                    {
+                                                    <span class="fa_custom">@this._selectedFile.Name</span>
+                                                    }
+                                                    else
+                                                    {
+                                                    <span>&nbsp;</span>
+                                                    }
+                                            </div>
+                                            }
+                                            else
+                                            {
+                                            <div col-sm-5>
+                                                <button class="btn btn-outline-success btn-sm" style="visibility: hidden;" type="button">@LocalizationResources.Select_Files</button> &nbsp; &nbsp;
+                                                <span>&nbsp;</span>
+                                            </div>
+                                            }
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-4 pl-4 ml-sm-2">
+                                            <InputRadio class="form-check-input" id="profile-fromcustomer"
+                                                            disabled="@IsSubmit" 
+                                                        Value="@InheritProfileString.Customer" />
+                                            &nbsp; <label class="form-check-label" for="profile-fromcustomer">Customer</label>
+                                        </div>
+                                        @if (_profileAndUserModel.RegisterModel.InheritProfile == @InheritProfileString.Customer)
+                                            {
+                                            <div col-sm-5>
+                                                <select class="form-control form-control-sm select_border_color" id="customerlist"
+                                                        @bind="@_profileAndUserModel.RegisterModel.CustomerProfileCodesFromDB.SelectByCustomerProfile">
+                                                    <option value="none"></option>
+                                                    @foreach (var sparam in _profileAndUserModel.RegisterModel.CustomerProfileCodesFromDB.CodeDictionary)
+                                                        {
+                                                        <option value=@sparam.Key>@sparam.Value</option>
+                                                        }
+                                                </select>
+                                            </div>
+                                            }
+                                            else
+                                            {
+                                            <div col-sm-5>
+                                                <button class="btn btn-outline-success btn-sm" style="visibility: hidden;" type="button">@LocalizationResources.Select_Files</button> &nbsp; &nbsp;
+                                                <span>&nbsp;</span>
+
+                                            </div>
+                                            }
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-4 pl-4 ml-sm-2">
+                                            <InputRadio class="form-check-input" id="profile-exist" 
+                                               disabled="@IsSubmit" 
+                                               Value="@InheritProfileString.Exist" />
+                                            &nbsp; <label class="form-check-label" for="profile-exist">Exist</label>
+                                        </div>
+                                        <div col-sm-5>
+                                            <button class="btn btn-outline-success btn-sm" style="visibility: hidden;" type="button">Exist</button> &nbsp; &nbsp;
+                                            <span>&nbsp;</span>
+                                        </div>
+
+                                        @*<div class="col">  </div>*@
+                                    </div>
+
+                                </InputRadioGroup>
+                            </div>
+                        </div>
+
+                        <BlazorInputFile.InputFile IsElementHidden="true" OnChange="HandleSelection" ElementId="myInput"> </BlazorInputFile.InputFile>
+
+
+
+
+                        @if (this._profileAndUserResult != null)
+                        {
+
+                      <div class="row pt-5">
+                        @*<div class="d-flex flex-row-reverse">*@
+                        <div class="form-group   pt-2">
+                              <button @onclick="ToCustomers" class="btn btn-outline-dark btn-sm search" disabled="@IsSubmit">
+                                    <i class="oi oi-xoutline-dark"></i>&nbsp; &nbsp; &nbsp;Cancel&nbsp;&nbsp;&nbsp;
+                                </button>
+                            @if (IsSubmit)
+                            {
+                                <button class="btn btn-success btn-sm  search disabled mx-2" disabled><span class="fa fa-spinner fa-spin fa-lg fa-fw"></span>Waiting ...</button>
+                            }
+                            else
+                            {
+                                   <button type="submit" class="btn btn-success btn-sm search mx-2"><i class="oi oi-pencil text-white"></i>&nbsp; &nbsp; &nbsp;&nbsp;Save&nbsp;&nbsp;&nbsp;&nbsp;</button>
+                                @*<button type="submit" class="btn btn-success btn-sm search"  data-toggle="tooltip" data-placement="bottom">Submit</button>*@
+                            }
+                        </div>
+
+
+
+                        <div class="col-md-6">
+                            @*////User*@
+                            @if (this._profileAndUserResult != null)
+                            {
+                                @if (this._profileAndUserResult.RegisterResult != null)
+                                {
+                                    <OperationResaltComponent Successful="@this._profileAndUserResult.RegisterResult.Successful"
+                                                              Error="@this._profileAndUserResult.RegisterResult.Error" Operation="Update User">
+
+                                    </OperationResaltComponent>
+
+                                }
+                            }
+
+                            @*//Customer*@
+
+                            @if (this._profileAndUserModel.ProfileFile != null)
+                            {
+                                @if (this._profileAndUserModel.ProfileFile.Successful != SuccessfulEnum.NotStart)
+                                {
+
+                                    <OperationResaltComponent Successful="@this._profileAndUserModel.ProfileFile.Successful"
+                                                              Error="@_profileAndUserModel.ProfileFile.Error" Operation="Copy Inherited Profile">
+
+                                    </OperationResaltComponent>
+                                }
+                            }
+
+                            @if (_profileFileService.RunUpdateFtpAndDbProfiles != null)
+                            {
+                                @foreach (var command in _profileFileService.RunUpdateFtpAndDbProfiles)
+                                {
+                                    <OperationResaltComponent Successful="@command.Successful"
+                                                              Error="@command.Error" Operation="@command.Step.GetDisplayDescription()">
+
+                                    </OperationResaltComponent>
+
+                                }
+                            }
+                        </div>  @*class="col-md-6"*@
+
+
+                         @if (this._profileAndUserResult != null)
+                        {
+                            @if (this._profileAndUserResult.GetUserResult != null)
+                            {
+                                @if (this._profileAndUserResult.GetUserResult.Successful == SuccessfulEnum.NotSuccessful
+                                || this._profileAndUserResult.GetUserResult.Successful == SuccessfulEnum.Error)
+                                {
+                                    <div class="alert alert-danger col px-2" role="alert">
+                                       <span>@this._profileAndUserResult.GetUserResult.Error</span>
+                                    </div>
+                                }
+                            }
+                        }
+                    </div>
+
+        
+         }
+
+          
+
+                   
+
+
+
+                        @*<InputFile OnChange="OnInputFileChange" @ref="refInputFile" class="btn btn-outline-success  btn-sm col-3" />*@
+
+                    </EditForm>
+                </div>
+
+            </div>
+        </div>
+        <div class="col-2 profile-menu-background">
+            @if (IsSubmit)
+            {
+                <MenuCustomerEditDissable></MenuCustomerEditDissable>
+            }
+            else
+            {
+                @if (customerCode != null)
+                {
+                    <MenuCustomerEdit customerCode="@customerCode"></MenuCustomerEdit>
+                }
+                else
+                {
+                      <MenuCustomerEditDissable></MenuCustomerEditDissable>
+                }
+            }
+
+        </div>
+    </div>
+}
+
+@code{
+
+
+    //Dictionary<IBrowserFile, string> loadedFiles = new Dictionary<IBrowserFile, string>();
+
+    //bool isLoading;
+    //long maxFileSize = 105000;
+    //int maxAllowedFiles = 1;
+    //string exceptionMessage;
+    //private InputFile refInputFile;
+
+    //IList<string> imageDataUrls = new List<string>();
+
+    //async Task OnInputFileChange(InputFileChangeEventArgs e)
+    //{
+    //    //   var imageFiles = e.GetMultipleFiles();
+    //    isLoading = true;
+    //    refInputFile.AdditionalAttributes ??= new Dictionary<string, object>();
+    //    refInputFile.AdditionalAttributes.Add("style", "display:none;");
+    //    loadedFiles.Clear();
+    //    exceptionMessage = string.Empty;
+
+    //    try
+    //    {
+    //        foreach (var file in e.GetMultipleFiles(maxAllowedFiles))
+    //        {
+    //            Console.WriteLine("file.Name : " + file.Name);
+    //            //StateHasChanged();
+
+    //            using var reader = new StreamReader(file.OpenReadStream(maxFileSize));
+
+    //            loadedFiles.Add(file, await reader.ReadToEndAsync());
+    //        }
+    //        Console.WriteLine("loadedFiles.Count : " + loadedFiles.Count);
+    //    }
+    //    catch (Exception ex)
+    //    {
+    //        exceptionMessage = ex.Message;
+    //        Console.WriteLine("OnInputFileChange exceptionMessage : " + exceptionMessage);
+    //    }
+
+    //    isLoading = false;
+    //    refInputFile.AdditionalAttributes.Remove("style");
+    //    StateHasChanged();
+    //}
+
+
+}

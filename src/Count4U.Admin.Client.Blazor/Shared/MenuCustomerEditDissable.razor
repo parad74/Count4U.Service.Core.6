@@ -1,0 +1,46 @@
+﻿
+<profile-menu>
+    <div class="row px-0">
+        <button class="btn btn-lg profile-menu-inbutton isDisabled">Edit Profile</button>
+        <div class="profile-menu-line-border row"></div>
+    </div>
+    <div class="row px-0">
+        <button class="btn btn-lg profile-menu-inbutton isDisabled">Old</button>
+        <div class="profile-menu-line-border row"></div>
+    </div>
+    <div class="row px-0">
+        <button class="btn btn-lg profile-menu-inbutton isDisabled">Test</button>
+    </div>
+    @if (IsShowCustomer)
+    {
+        <div class="row px-0">
+            <div class="profile-menu-line-border row"></div>
+            <button class="btn btn-lg profile-menu-inbutton isDisabled">Customers</button>
+
+        </div>
+
+    }
+    @if (IsShowUsers)
+    {
+        <div class="row px-0">
+            <div class="profile-menu-line-border row"></div>
+            <button class="btn btn-lg profile-menu-inbutton isDisabled">Users</button>
+        </div>
+
+    }
+
+</profile-menu>
+
+
+@code{
+    [Parameter]
+    public bool IsShowCustomer { get; set; } = true;
+
+    //[Parameter]
+    //public bool IsShowRole { get; set; } = true;
+
+    [Parameter]
+    public bool IsShowUsers { get; set; } = true;
+}
+
+
